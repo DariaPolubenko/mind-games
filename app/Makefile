@@ -1,6 +1,6 @@
 
 run-dist: # запускает файл app
-	./build/install/app/bin/app
+	~/java-project-61/app/build/install/app/bin/app
 
 
 
