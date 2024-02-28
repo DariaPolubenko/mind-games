@@ -7,3 +7,5 @@
 
 [![Asciinema of game "Even"](https://asciinema.org/a/sDT0ceKevqcX9WcgQ6wvz3YBJ)]
 
+[![Asciinema of game "Calculator"](https://asciinema.org/a/643790)]
+
