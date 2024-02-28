@@ -41,3 +41,6 @@ bin/
 ### Mac OS ###
 .DS_Store
 ../.DS_Store
+
+### Asciinema ###
+app/demo.cast
