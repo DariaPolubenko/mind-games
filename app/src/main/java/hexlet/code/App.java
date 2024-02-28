@@ -9,6 +9,7 @@ class App {
         System.out.println("Please enter the game number and press Enter.\n"
                 + "1 - Greet\n"
                 + "2 - Even\n"
+                + "3 - Calc\n"
                 + "0 - Exit");
 
         int userChoice = choice.nextInt();
@@ -24,7 +25,11 @@ class App {
                     case 2:
                         var resultEven = Even.getEven();
                         System.out.println(resultEven + userName);
-                        //case 3:
+                        break;
+                    case 3:
+                        var resultCalc = Calc.getCalc();
+                        System.out.println(resultCalc + userName);
+                        break;
                 }
         }
     }
