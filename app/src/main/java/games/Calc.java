@@ -33,13 +33,16 @@ public class Calc {
                     result = firstNumber * secondNumber;
                     break;
             }
+
             var resultString = String.valueOf(result);
             var output = Engine.getEngine(resultString);
 
             if (!output) {
                 return "Let's try again, ";
             }
+
         }
+
         return "Congratulations, ";
     }
 }
