@@ -1,6 +1,7 @@
-package hexlet.code;
+package games;
 
-import java.util.Scanner;
+import hexlet.code.Engine;
+
 
 public class Calc {
     public static String getCalc() {
@@ -19,15 +20,12 @@ public class Calc {
             var operation = operations[randomOperation];
             System.out.println("Question: " + firstNumber + " " + operation + " " + secondNumber);
 
-            Scanner answer = new Scanner(System.in);
-            System.out.println("Your answer: ");
-            int userAnswer = answer.nextInt();
-
             int result = 0;
-            switch(operation) {
+            switch (operation) {
                 case '+':
                     result = firstNumber + secondNumber;
                     break;
+
                 case '-':
                     result = firstNumber - secondNumber;
                     break;
@@ -35,11 +33,10 @@ public class Calc {
                     result = firstNumber * secondNumber;
                     break;
             }
+            var resultString = String.valueOf(result);
+            var output = Engine.getEngine(resultString);
 
-            if (userAnswer == result) {
-                System.out.println("Correct!");
-            } else {
-                System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. Correct answer was " + "'" + result + "'.");
+            if (!output) {
                 return "Let's try again, ";
             }
         }
