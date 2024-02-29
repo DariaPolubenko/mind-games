@@ -1,5 +1,8 @@
 package hexlet.code;
 
+import games.Calc;
+import games.Even;
+
 import java.util.Scanner;
 
 class App {
