@@ -2,6 +2,7 @@ package hexlet.code;
 
 import games.Calc;
 import games.Even;
+import games.GCD;
 
 import java.util.Scanner;
 
@@ -13,11 +14,12 @@ class App {
                 + "1 - Greet\n"
                 + "2 - Even\n"
                 + "3 - Calc\n"
+                + "4 - GCD\n"
                 + "0 - Exit");
 
         int userChoice = choice.nextInt();
         System.out.println("Your choice: " + userChoice + "\n");
-        //userChoice.close();
+
 
         if (userChoice >= 1) {
             System.out.println("Welcome to the Brain Games!");
@@ -33,7 +35,13 @@ class App {
                         var resultCalc = Calc.getCalc();
                         System.out.println(resultCalc + userName);
                         break;
+                    case 4:
+                        var resultGCD = GCD.getGCD();
+                        System.out.println(resultGCD + userName);
+                        break;
                 }
         }
+
+        //userChoice.close();
     }
 }
