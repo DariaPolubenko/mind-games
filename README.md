@@ -9,3 +9,6 @@
 
 [![Asciinema of game "Calculator"](https://asciinema.org/a/643790)]
 
+[![Asciinema of game "GCD"](https://asciinema.org/a/644151)]
+
+
