@@ -16,6 +16,7 @@ public class Engine {
             System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. Correct answer was " + "'" + result + "'.");
             return false;
         }
+
         return true;
     }
 }
