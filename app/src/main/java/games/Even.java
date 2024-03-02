@@ -3,32 +3,27 @@ package games;
 import hexlet.code.Engine;
 
 public class Even {
-    public static String getEven() {
+    public static void getEven() {
 
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        var greeting = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-        for (var i = 1; i <= 3; i++) {
+        int[] numbers = new int[3];
+        String[] questions = new String[3];
+        String[] results = new String[3];
 
-            var random = (int) (Math.random() * 100);
-            int even = random % 2;
+        for (var i = 0; i < 3; i++) {
 
-            var result ="";
+            numbers[i] = (int) (Math.random() * 100);
+            questions[i] = ("Question: " + numbers[i]);
+
+            int even = numbers[i] % 2;
             if (even == 0) {
-                result = "yes";
+                results[i] = "yes";
             } else {
-                result = "no";
+                results[i] = "no";
             }
-
-            System.out.println("Question: " + random);
-
-            var output = Engine.getEngine(result);
-
-            if (!output) {
-                return "Let's try again, ";
-            }
-
         }
 
-        return "Congratulations, ";
+        Engine.getEngine(greeting, questions, results);
     }
 }
