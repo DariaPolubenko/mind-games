@@ -28,16 +28,13 @@ class App {
 
                 switch (userChoice) {
                     case 2:
-                        var resultEven = Even.getEven();
-                        System.out.println(resultEven + userName);
+                        Even.getEven();
                         break;
                     case 3:
-                        var resultCalc = Calc.getCalc();
-                        System.out.println(resultCalc + userName);
+                        Calc.getCalc();
                         break;
                     case 4:
-                        var resultGCD = GCD.getGCD();
-                        System.out.println(resultGCD + userName);
+                        GCD.getGCD();
                         break;
                 }
         }
