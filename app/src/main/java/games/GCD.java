@@ -3,43 +3,36 @@ package games;
 import hexlet.code.Engine;
 
 public class GCD {
-    public static String getGCD() {
+    public static void getGCD() {
 
-        System.out.println("Find the greatest common divisor of given numbers.");
+        var greeting = "Find the greatest common divisor of given numbers.";
 
-        for (var i = 1; i <= 3; i++) {
+            int[][] numbers = new int[3][2];
+            String[] questions = new String[3];
+            String[] results = new String[3];
 
-            int firstNumber;
-            int secondNumber;
-
-            do {
-                firstNumber = (int) (Math.random() * 100);
-                secondNumber = (int) (Math.random() * 100);
-            } while ((firstNumber == 0) && (secondNumber == 0));
-
-            System.out.println("Question: " + firstNumber + " " + secondNumber);
+            for (var i = 0; i < 3; i++) {
+                do {
+                    numbers[i][0] = (int) (Math.random() * 100);
+                    numbers[i][1] = (int) (Math.random() * 100);
+                } while ((numbers[i][0] == 0) && (numbers[i][1] == 0)
+                        && (numbers[i][0] > 30 || numbers[i][1] > 50));
 
 
-            while (firstNumber != 0 && secondNumber != 0) {
-                if (firstNumber > secondNumber) {
-                        firstNumber = firstNumber % secondNumber;
-                } else {
-                    secondNumber = secondNumber % firstNumber;
+                questions[i] = ("Question: " + numbers[i][0] + " " + numbers[i][1]);
+
+                while (numbers[i][0] != 0 && numbers[i][1] != 0) {
+                    if (numbers[i][0] > numbers[i][1]) {
+                        numbers[i][0] = numbers[i][0] % numbers[i][1];
+                    } else {
+                        numbers[i][1] = numbers[i][1] % numbers[i][0];
+                    }
                 }
+
+                var result = numbers[i][0] + numbers[i][1];
+                results[i] = String.valueOf(result);
             }
 
-            var result = firstNumber + secondNumber;
-
-            var resultString = String.valueOf(result);
-            var output = Engine.getEngine(resultString);
-
-            if (!output) {
-                return "Let's try again, ";
-            }
-
-        }
-
-        return "Congratulations, ";
-
+            Engine.getEngine(greeting, questions, results);
     }
 }
