@@ -13,3 +13,5 @@
 
 [![Asciinema of game "Progression"](https://asciinema.org/a/645093)]
 
+[![Asciinema of game "Prime"](https://asciinema.org/a/645100)]
+
