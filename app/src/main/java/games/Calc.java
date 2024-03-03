@@ -7,10 +7,10 @@ public class Calc {
 
         var greeting = "What is the result of the expression?";
 
+        String[] operations = {"+", "-", "*"};
+
         int[][] numbers = new int[3][2];
         String[] questions = new String[3];
-
-        String[] operations = {"+", "-", "*"};
 
         int[] results = new int[3];
         String[] resultStrings = new String[3];
@@ -18,9 +18,9 @@ public class Calc {
 
         for (var i = 0; i < 3; i++) {
 
-            int minId = 0;
-            int maxId = 2;
-            int randomOperation = minId + (int) (Math.random() * (maxId - minId + 1));
+            int minElement = 0;
+            int maxElement = 2;
+            int randomOperation = minElement + (int) (Math.random() * (maxElement - minElement + 1));
             var operation = operations[randomOperation];
 
             if (operation.equals("*")) {
