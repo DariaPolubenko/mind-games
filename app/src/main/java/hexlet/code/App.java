@@ -4,6 +4,7 @@ import games.Calc;
 import games.Even;
 import games.GCD;
 import games.Progression;
+import games.Prime;
 
 import java.util.Scanner;
 
@@ -17,6 +18,7 @@ class App {
                 + "3 - Calc\n"
                 + "4 - GCD\n"
                 + "5 - Progression\n"
+                + "6 - Prime\n"
                 + "0 - Exit");
 
         int userChoice = choice.nextInt();
@@ -40,6 +42,9 @@ class App {
                         break;
                     case 5:
                         Progression.getProgression();
+                        break;
+                    case 6:
+                        Prime.getPrime();
                         break;
                 }
         }
