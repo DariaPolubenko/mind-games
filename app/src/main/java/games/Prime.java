@@ -19,16 +19,17 @@ public class Prime {
             questions[i] = "Question: " + number;
 
             boolean simpleNumber = true;
-
             var splitter = 2;
-            while ((number > 1) && (splitter < 8)) {
+
+            while ((number > 3 && number != 5 && number != 7) && (splitter < 8)) {
                 if (number % splitter != 0) {
                     simpleNumber = true;
                     splitter += 1;
-            } else {
+                } else {
                     simpleNumber = false;
                     break;
                 }
+
             }
 
         results[i] = simpleNumber ? "yes" : "no";
