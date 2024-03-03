@@ -12,12 +12,18 @@ public class GCD {
             String[] results = new String[3];
 
             for (var i = 0; i < 3; i++) {
-                do {
-                    numbers[i][0] = (int) (Math.random() * 100);
-                    numbers[i][1] = (int) (Math.random() * 100);
-                } while ((numbers[i][0] == 0) && (numbers[i][1] == 0)
-                        && (numbers[i][0] > 30 || numbers[i][1] > 50));
 
+                int minMultiplier = 1;
+                int maxMultiplier = 10;
+                int multiplier = minMultiplier + (int) (Math.random() * (maxMultiplier - minMultiplier + 1));
+
+                do {
+                    numbers[i][0] = minMultiplier + (int) (Math.random() * (maxMultiplier - minMultiplier + 1));
+                    numbers[i][1] = minMultiplier + (int) (Math.random() * (maxMultiplier - minMultiplier + 1));
+                } while (numbers[i][0] == numbers[i][1]);
+
+                numbers[i][0] = numbers[i][0] * multiplier;
+                numbers[i][1] = numbers[i][1] * multiplier;
 
                 questions[i] = ("Question: " + numbers[i][0] + " " + numbers[i][1]);
 
