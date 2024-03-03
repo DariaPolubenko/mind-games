@@ -11,4 +11,5 @@
 
 [![Asciinema of game "GCD"](https://asciinema.org/a/644151)]
 
+[![Asciinema of game "Progression"](https://asciinema.org/a/645093)]
 
