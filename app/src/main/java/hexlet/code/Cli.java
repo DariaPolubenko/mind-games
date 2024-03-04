@@ -7,7 +7,7 @@ public class Cli {
     public static String getName() {
         Scanner name = new Scanner(System.in);
 
-        System.out.print("May I have your name? \n");
+        System.out.print("May I have your name? ");
         userName = name.next();
 
         return userName;
