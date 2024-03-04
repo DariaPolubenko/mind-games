@@ -25,12 +25,12 @@ public class Prime {
 
             boolean simpleNumber = true;
             int splitter = 2;
-            final int oneNumberOfSimple = 3;
-            final int twoNumberOfSimple = 5;
-            final int threeNumberOfSimple = 7;
-            final int maxSplitter = 7;
+            final int numberThreeSimple = 3;
+            final int numberFiveSimple = 5;
+            final int numberSevenSimple = 7;
+            final int maxSplitter = 8;
 
-            while ((number > oneNumberOfSimple && number != twoNumberOfSimple && number != threeNumberOfSimple)
+            while ((number > numberThreeSimple && number != numberFiveSimple && number != numberSevenSimple)
                     && (splitter < maxSplitter)) {
                 if (number % splitter != 0) {
                     simpleNumber = true;
