@@ -40,6 +40,8 @@ public class Calc {
                 case "*":
                     result = numbers[0] * numbers[1];
                     break;
+                default:
+                    System.out.println("Error");
             }
 
             resultStrings[i] = String.valueOf(result);
