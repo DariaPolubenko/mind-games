@@ -5,10 +5,16 @@ import java.util.Scanner;
 public class Engine {
     public static void getEngine(String greeting, String[] questions, String[] results) {
 
-        System.out.println(greeting);
+        System.out.println("Welcome to the Brain Games!\n"
+                + "May I have your name? ");
+
+        Scanner name = new Scanner(System.in);
+        var userName = name.next();
+
+        System.out.println("Hello, " + userName + "!\n" + greeting);
+
 
         final int rounds = 3;
-
         for (var i = 0; i < rounds; i++) {
 
             System.out.println(questions[i]);
@@ -23,12 +29,11 @@ public class Engine {
                 System.out.println("'" + userAnswer + "'"
                         + " is wrong answer ;(. Correct answer was " + "'"
                         + results[i] + "'.");
-                System.out.println("Let's try again, " + Cli.userName + "!");
+                System.out.println("Let's try again, " + userName + "!");
                 return;
             }
         }
 
-        System.out.println("Congratulations, " + Cli.userName + "!");
-        return;
+        System.out.println("Congratulations, " + userName + "!");
     }
 }
