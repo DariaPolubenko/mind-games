@@ -5,13 +5,13 @@ import hexlet.code.Engine;
 public class Progression {
     public static void getProgression() {
 
-        var greeting = "Find the greatest common divisor of given numbers.";
+        var greeting = "What number is missing in the progression?";
         String[] questions = new String[3];
         String[] results = new String[3];
 
         for (var i = 0; i < 3; i++) {
 
-            int length = 8;
+            int length = 10;
             int[] numbers = new int[length];
 
             // присваиваем массиву первое рандомное число
