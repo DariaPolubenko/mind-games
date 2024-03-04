@@ -21,7 +21,7 @@ public class Progression {
             // находим число прогрессии (разность между одним элементом и предыдущим)
             int minProgression = 1;
             int maxProgression = 20;
-            int progressionNumber = (int) (Math.random() * (maxProgression - minProgression ) + minProgression);
+            int progressionNumber = (int) (Math.random() * (maxProgression - minProgression) + minProgression);
 
             // находим номер отсутствующего элемента
             int maxMissing = length - 1;
