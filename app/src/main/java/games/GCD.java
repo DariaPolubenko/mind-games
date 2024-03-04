@@ -28,17 +28,17 @@ public class GCD {
             questions[i] = "Question: " + numbers[0] + " " + numbers[1];
 
             while (numbers[0] != 0 && numbers[1] != 0) {
-                    if (numbers[0] > numbers[1]) {
-                        numbers[0] = numbers[0] % numbers[1];
-                    } else {
-                        numbers[1] = numbers[1] % numbers[0];
-                    }
+                if (numbers[0] > numbers[1]) {
+                    numbers[0] = numbers[0] % numbers[1];
+                } else {
+                    numbers[1] = numbers[1] % numbers[0];
                 }
-
-                var result = numbers[0] + numbers[1];
-                results[i] = String.valueOf(result);
             }
 
-            Engine.getEngine(greeting, questions, results);
+            var result = numbers[0] + numbers[1];
+            results[i] = String.valueOf(result);
+        }
+
+        Engine.getEngine(greeting, questions, results);
     }
 }
