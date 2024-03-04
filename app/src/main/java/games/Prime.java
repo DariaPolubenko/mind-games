@@ -29,10 +29,9 @@ public class Prime {
                     simpleNumber = false;
                     break;
                 }
-
             }
 
-        results[i] = simpleNumber ? "yes" : "no";
+            results[i] = simpleNumber ? "yes" : "no";
         }
 
         Engine.getEngine(greeting, questions, results);
