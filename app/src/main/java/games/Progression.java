@@ -11,18 +11,23 @@ public class Progression {
 
         for (var i = 0; i < 3; i++) {
 
-            // находим длину прогресии
+            // находим длину прогресии и создаем массив для прогрессии
             int minLength = 5;
             int maxLength = 10;
             int length = minLength + (int) (Math.random() * (maxLength - minLength + 1));
 
-            // создаем массив для прогрессии и присваиваем ему первый рандомный номер
             int[] numbers = new int[length];
-            int firstNumber = (int) (Math.random() * 100);
+
+            // присваиваем массиву первый рандомный номер от 1 до 100
+            int minFirst = 1;
+            int maxFirst = 100;
+            int firstNumber = minFirst + (int) (Math.random() * (maxFirst - minFirst + 1));
             numbers[0] = firstNumber;
 
             // находим число прогрессии (разность между одним элементом и предыдущим)
-            int progressionNumber = (int) (Math.random() * 100);
+            int minProgression = 1;
+            int maxProgression = 20;
+            int progressionNumber = minProgression + (int) (Math.random() * (maxProgression - minProgression + 1));
 
             // находим номер отсутствующего элемента
             int minMissing = 0;
