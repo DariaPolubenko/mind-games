@@ -7,7 +7,9 @@ public class Engine {
 
         System.out.println(greeting);
 
-        for (var i = 0; i < 3; i++) {
+        int hasQuestions = 3;
+
+        for (var i = 0; i < hasQuestions; i++) {
 
             System.out.println(questions[i]);
 
@@ -18,7 +20,9 @@ public class Engine {
             if (results[i].equals(userAnswer)) {
                 System.out.println("Correct!");
             } else if (!results[i].equals(userAnswer)) {
-                System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. Correct answer was " + "'" + results[i] + "'.");
+                System.out.println("'" + userAnswer + "'"
+                        + " is wrong answer ;(. Correct answer was " + "'"
+                        + results[i] + "'.");
                 System.out.println("Let's try again, " + Cli.userName + "!");
                 return;
             }
