@@ -1,7 +1,7 @@
 package hexlet.code;
 
-import games.Calc;
 import games.Even;
+import games.Calc;
 import games.GCD;
 import games.Progression;
 import games.Prime;
@@ -24,31 +24,32 @@ class App {
         int userChoice = choice.nextInt();
         System.out.println("Your choice: " + userChoice + "\n");
 
-
-        if (userChoice >= 1) {
+        if (userChoice > 0) {
             System.out.println("Welcome to the Brain Games!");
+
             var userName = Cli.getName();
             System.out.println("Hello, " + userName + "!");
 
-                switch (userChoice) {
-                    case 2:
-                        Even.getEven();
-                        break;
-                    case 3:
-                        Calc.getCalc();
-                        break;
-                    case 4:
-                        GCD.getGCD();
-                        break;
-                    case 5:
-                        Progression.getProgression();
-                        break;
-                    case 6:
-                        Prime.getPrime();
-                        break;
-                }
+            switch (userChoice) {
+                case 1:
+                    break;
+                case 2:
+                    Even.getEven();
+                    break;
+                case 3:
+                    Calc.getCalc();
+                    break;
+                case 4:
+                    GCD.getGCD();
+                    break;
+                case 5:
+                    Progression.getProgression();
+                    break;
+                default:
+                    Prime.getPrime();
+                    break;
+            }
         }
-
-        //userChoice.close();
     }
 }
+
