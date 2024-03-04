@@ -19,12 +19,12 @@ public class Engine {
                 System.out.println("Correct!");
             } else if (!results[i].equals(userAnswer)) {
                 System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. Correct answer was " + "'" + results[i] + "'.");
-                System.out.println("Let's try again, " + Cli.userName);
+                System.out.println("Let's try again, " + Cli.userName + "!");
                 return;
             }
         }
 
-        System.out.println("Congratulations, " + Cli.userName);
+        System.out.println("Congratulations, " + Cli.userName + "!");
         return;
     }
 }
