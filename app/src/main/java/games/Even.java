@@ -15,11 +15,7 @@ public class Even {
             questions[i] = "Question: " + number;
 
             int even = number % 2;
-            if (even == 0) {
-                results[i] = "yes";
-            } else {
-                results[i] = "no";
-            }
+            results[i] = even == 0 ? "yes" : "no";
         }
 
         Engine.getEngine(greeting, questions, results);
