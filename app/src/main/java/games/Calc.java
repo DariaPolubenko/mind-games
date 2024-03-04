@@ -34,7 +34,6 @@ public class Calc {
                 case "+":
                     result = numbers[0] + numbers[1];
                     break;
-
                 case "-":
                     result = numbers[0] - numbers[1];
                     break;
@@ -45,6 +44,7 @@ public class Calc {
 
             resultStrings[i] = String.valueOf(result);
         }
+
         Engine.getEngine(greeting, questions, resultStrings);
     }
 }
