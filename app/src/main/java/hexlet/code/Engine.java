@@ -7,9 +7,9 @@ public class Engine {
 
         System.out.println(greeting);
 
-        int hasQuestions = 3;
+        final int rounds = 3;
 
-        for (var i = 0; i < hasQuestions; i++) {
+        for (var i = 0; i < rounds; i++) {
 
             System.out.println(questions[i]);
 
