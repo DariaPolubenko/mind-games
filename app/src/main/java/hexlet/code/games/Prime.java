@@ -12,11 +12,10 @@ public class Prime {
         String[] results = new String[length];
 
         final int rounds = 3;
-
         for (var i = 0; i < rounds; i++) {
 
-            final int rangeOfNumbers = 100;
             int number;
+            final int rangeOfNumbers = 100;
             do {
                 number = (int) (Math.random() * rangeOfNumbers);
             } while (number == 0);
@@ -24,20 +23,12 @@ public class Prime {
             questions[i] = "Question: " + number;
 
             boolean simpleNumber = true;
-            int splitter = 2;
-            final int numberThreeSimple = 3;
-            final int numberFiveSimple = 5;
-            final int numberSevenSimple = 7;
-            final int maxSplitter = 8;
-
-            while ((number > numberThreeSimple && number != numberFiveSimple && number != numberSevenSimple)
-                    && (splitter < maxSplitter)) {
-                if (number % splitter != 0) {
-                    simpleNumber = true;
-                    splitter += 1;
-                } else {
-                    simpleNumber = false;
-                    break;
+            if (number > 2) {
+                for (var j = 2; j < number; j++) {
+                    if (number % j == 0) {
+                        simpleNumber = false;
+                        break;
+                    }
                 }
             }
 
