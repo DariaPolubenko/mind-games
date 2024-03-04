@@ -11,17 +11,11 @@ public class Progression {
 
         for (var i = 0; i < 3; i++) {
 
-            // находим длину прогресии и создаем массив для прогрессии
-            int minLength = 6;
-            int maxLength = 10;
-            int length = (int) (Math.random() * (maxLength - minLength) + minLength);
-
+            int length = 8;
             int[] numbers = new int[length];
 
-            // присваиваем массиву первый рандомный номер от 1 до 100
-            int minFirst = 1;
-            int maxFirst = 100;
-            int firstNumber = (int) (Math.random() * (maxFirst - minFirst) + minFirst);
+            // присваиваем массиву первое рандомное число
+            int firstNumber = (int) (Math.random() * 10);
             numbers[0] = firstNumber;
 
             // находим число прогрессии (разность между одним элементом и предыдущим)
