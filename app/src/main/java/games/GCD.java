@@ -13,13 +13,13 @@ public class GCD {
 
             int[] numbers = new int[2];
 
-            int minMultiplier = 1;
-            int maxMultiplier = 10;
-            int multiplier = minMultiplier + (int) (Math.random() * (maxMultiplier - minMultiplier + 1));
+            int minNumber = 1;
+            int maxNumber = 10;
+            int multiplier = minNumber + (int) (Math.random() * (maxNumber - minNumber + 1));
 
             do {
-                numbers[0] = minMultiplier + (int) (Math.random() * (maxMultiplier - minMultiplier + 1));
-                numbers[1] = minMultiplier + (int) (Math.random() * (maxMultiplier - minMultiplier + 1));
+                numbers[0] = minNumber + (int) (Math.random() * (maxNumber - minNumber + 1));
+                numbers[1] = minNumber + (int) (Math.random() * (maxNumber - minNumber + 1));
             } while (numbers[0] == numbers[1]);
 
             numbers[0] = numbers[0] * multiplier;
