@@ -32,7 +32,7 @@ public class Progression {
 
             if (missingNumber == 0) {
                 result = numbers[0];
-                question.append("..");
+                question.append(".. ");
             }
 
             for (var j = 1; j < length; j++) {
