@@ -6,15 +6,19 @@ public class GCD {
     public static void getGCD() {
 
         var greeting = "Find the greatest common divisor of given numbers.";
-        String[] questions = new String[3];
-        String[] results = new String[3];
 
-        for (var i = 0; i < 3; i++) {
+        final int lenght = 3;
+        String[] questions = new String[lenght];
+        String[] results = new String[lenght];
 
-            int[] numbers = new int[2];
+        final int rounds = 3;
+        for (var i = 0; i < rounds; i++) {
 
-            int minNumber = 1;
-            int maxNumber = 10;
+            final int numberOfDigits = 2;
+            int[] numbers = new int[numberOfDigits];
+
+            final int minNumber = 1;
+            final int maxNumber = 10;
             int multiplier = minNumber + (int) (Math.random() * (maxNumber - minNumber + 1));
 
             do {
