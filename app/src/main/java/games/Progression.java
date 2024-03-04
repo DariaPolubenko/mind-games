@@ -6,21 +6,23 @@ public class Progression {
     public static void getProgression() {
 
         var greeting = "What number is missing in the progression?";
-        String[] questions = new String[3];
-        String[] results = new String[3];
+        final int lenght = 3;
+        String[] questions = new String[lenght];
+        String[] results = new String[lenght];
 
-        for (var i = 0; i < 3; i++) {
+        final int rounds = 3;
+        for (var i = 0; i < rounds; i++) {
 
-            int length = 10;
+            final int length = 10;
             int[] numbers = new int[length];
 
-            // присваиваем массиву первое рандомное число
-            int firstNumber = (int) (Math.random() * 10);
+            final int rangeOfFirstNumbers = 10;
+            int firstNumber = (int) (Math.random() * rangeOfFirstNumbers);
             numbers[0] = firstNumber;
 
             // находим число прогрессии (разность между одним элементом и предыдущим)
-            int minProgression = 1;
-            int maxProgression = 20;
+            final int minProgression = 1;
+            final int maxProgression = 20;
             int progressionNumber = (int) (Math.random() * (maxProgression - minProgression) + minProgression);
 
             // находим номер отсутствующего элемента
