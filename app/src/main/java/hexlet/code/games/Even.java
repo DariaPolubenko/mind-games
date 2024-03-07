@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Even {
-    public static void getEven() {
+    public static void playEven() {
 
         var greeting = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
