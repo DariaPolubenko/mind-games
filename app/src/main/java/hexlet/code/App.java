@@ -26,8 +26,11 @@ class App {
         System.out.println("Your choice: " + userChoice + "\n");
 
         switch (userChoice) {
+            case "0":
+                System.out.println("Good bye!");
+                break;
             case "1":
-                Cli.getName();
+                Cli.greetings();
                 break;
             case "2":
                 Even.getEven();
@@ -45,6 +48,7 @@ class App {
                 Prime.getPrime();
                 break;
             default:
+                System.out.println("Incorrect input");
                 break;
         }
     }
