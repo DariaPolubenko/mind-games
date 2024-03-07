@@ -33,19 +33,19 @@ class App {
                 Cli.greetings();
                 break;
             case "2":
-                Even.getEven();
+                Even.playEven();
                 break;
             case "3":
-                Calc.getCalc();
+                Calc.playCalc();
                 break;
             case "4":
-                GCD.getGCD();
+                GCD.playGCD();
                 break;
             case "5":
-                Progression.getProgression();
+                Progression.playProgression();
                 break;
             case "6":
-                Prime.getPrime();
+                Prime.playPrime();
                 break;
             default:
                 System.out.println("Incorrect input");
