@@ -4,7 +4,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/3770e3a7d9adb8ce2b82/test_coverage)](https://codeclimate.com/github/DariaPolubenko/java-project-61/test_coverage)
 
 ## Description
-_**Mind Games** is a small project, consists of 5 console games for brain pumping. 
+**Mind Games** is a small project, consists of 5 console games for brain pumping. 
 Each game asks 3 math questions and you must answer them correctly. If the answer is incorrect, it is interrupted and you are asked to go through it again.
 
 # Included games
