@@ -13,15 +13,27 @@ For each game you have to answer 3 questions correctly, otherwise the game will 
 make run-dist
 ```
 
-### First game *Even* demo
+
+### First game *Even parity check* demo
 [![asciicast](https://asciinema.org/a/643724.svg)](https://asciinema.org/a/643724)
 
 
-[![Asciinema of game "Calculator"](https://asciinema.org/a/643790)]
 
-[![Asciinema of game "GCD"](https://asciinema.org/a/644151)]
+### Second game *Сalculator* demo
+[![asciicast](https://asciinema.org/a/643790.svg)](https://asciinema.org/a/643790)
 
-[![Asciinema of game "Progression"](https://asciinema.org/a/645093)]
 
-[![Asciinema of game "Prime"](https://asciinema.org/a/645100)]
+
+### Third game *Greatest common divisor (GCD)* demo
+[![asciicast](https://asciinema.org/a/644151.svg)](https://asciinema.org/a/644151)
+
+
+
+### Fourth game *Arithmetic progression* demo
+[![asciicast](https://asciinema.org/a/645093.svg)](https://asciinema.org/a/645093)
+
+
+### Fifth game *Is a prime number?* demo
+[![asciicast](https://asciinema.org/a/645100.svg)](https://asciinema.org/a/645100)
+
 
