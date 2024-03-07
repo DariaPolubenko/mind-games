@@ -30,6 +30,7 @@ make run-dist
 
 Ou command
 ```bash
+cd java-project-61
 app/build/install/app/bin/app
 ```
 
