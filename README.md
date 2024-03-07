@@ -18,7 +18,7 @@ Each game asks 3 math questions and you must answer them correctly. If the answe
 ## How to install
 In the console, type the command
 ```bash
-git clone git@github.com:paulvino/java-project-61.git
+git clone git@github.com:DariaPolubenko/java-project-61.git
 ```
 
 ## Start
