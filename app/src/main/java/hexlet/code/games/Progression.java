@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Progression {
-    public static void getProgression() {
+    public static void playProgression() {
 
         var greeting = "What number is missing in the progression?";
         final int lenght = 3;
