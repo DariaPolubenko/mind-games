@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Calc {
-    public static void getCalc() {
+    public static void playCalc() {
 
         var greeting = "What is the result of the expression?";
 
