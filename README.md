@@ -13,7 +13,7 @@ For each game you have to answer 3 questions correctly, otherwise the game will 
 make run-dist
 ```
 
-### Even game
+### First game **Even** demo
 [![asciicast](https://asciinema.org/a/643724.svg)](https://asciinema.org/a/643724)
 
 
