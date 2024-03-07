@@ -4,8 +4,8 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/3770e3a7d9adb8ce2b82/test_coverage)](https://codeclimate.com/github/DariaPolubenko/java-project-61/test_coverage)
 
 ## Description
-Mind Games is a small project, consists of 5 games. 
-For each game you have to answer 3 questions correctly, otherwise the game will be finished. 
+_**Mind Games** is a small project, consists of 5 games. 
+For each game you have to answer 3 questions correctly, otherwise the game will be finished._ 
 
 ![asciicast]({https://asciinema.org/a/sDT0ceKevqcX9WcgQ6wvz3YBJ}.svg)]({https://asciinema.org/a/sDT0ceKevqcX9WcgQ6wvz3YBJ})
 
