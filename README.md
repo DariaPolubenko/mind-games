@@ -13,7 +13,7 @@ For each game you have to answer 3 questions correctly, otherwise the game will 
 make run-dist
 ```
 
-[![asciicast](https://asciinema.org/a/643724.svg)](https://asciinema.org/a/643724)
+[![asciicast](https://asciinema.org/a/643724.svg)({https://asciinema.org/a/643724})]
 
 
 [![Asciinema of game "Calculator"](https://asciinema.org/a/643790)]
