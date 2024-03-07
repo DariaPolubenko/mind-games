@@ -5,7 +5,10 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/3770e3a7d9adb8ce2b82/test_coverage)](https://codeclimate.com/github/DariaPolubenko/java-project-61/test_coverage)
 
-[![Asciinema of game "Even"](https://asciinema.org/a/sDT0ceKevqcX9WcgQ6wvz3YBJ)]
+
+
+![asciicast]({https://asciinema.org/a/sDT0ceKevqcX9WcgQ6wvz3YBJ}.svg)]({https://asciinema.org/a/sDT0ceKevqcX9WcgQ6wvz3YBJ})
+
 
 [![Asciinema of game "Calculator"](https://asciinema.org/a/643790)]
 
