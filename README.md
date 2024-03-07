@@ -7,7 +7,13 @@
 _**Mind Games** is a small project, consists of 5 games. 
 For each game you have to answer 3 questions correctly, otherwise the game will be finished._ 
 
-![asciicast]({https://asciinema.org/a/sDT0ceKevqcX9WcgQ6wvz3YBJ}.svg)]({https://asciinema.org/a/sDT0ceKevqcX9WcgQ6wvz3YBJ})
+## Start
+
+```bash
+make run-dist
+```
+
+![asciicast](https://asciinema.org/a/643724.svg)]({https://asciinema.org/a/sDT0ceKevqcX9WcgQ6wvz3YBJ})
 
 
 [![Asciinema of game "Calculator"](https://asciinema.org/a/643790)]
