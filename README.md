@@ -7,7 +7,7 @@
 **Mind Games** is a small project, consists of 5 console games for brain pumping. 
 Each game asks 3 math questions and you must answer them correctly. If the answer is incorrect, it is interrupted and you are asked to go through it again.
 
-### Included games
+### Included games:
 1. Even - even parity check
 2. Calc (calculator) - arithmetic expressions
 3. GCD (greatest common divisor) - finding common greatest divisor
