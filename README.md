@@ -4,33 +4,53 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/3770e3a7d9adb8ce2b82/test_coverage)](https://codeclimate.com/github/DariaPolubenko/java-project-61/test_coverage)
 
 ## Description
-_**Mind Games** is a small project, consists of 5 games. 
-For each game you have to answer 3 questions correctly, otherwise the game will be finished._ 
+_**Mind Games** is a small project, consists of 5 console games for brain pumping. 
+Each game asks 3 math questions and you must answer them correctly. If the answer is incorrect, it is interrupted and you are asked to go through it again.
+
+# Included games
+1. Even - even parity check
+2. Calc (calculator) - arithmetic expressions
+3. GCD (greatest common divisor) - finding common greatest divisor
+4. Progression (arithmetic progression) - finding missing numbers in a sequence
+5. Prime - determining a prime number
+
+
+## How to install
+In the console, type the command
+```bash
+git clone git@github.com:paulvino/java-project-61.git
+```
 
 ## Start
-
+in the console, type the command
 ```bash
+cd java-project-61/app
 make run-dist
 ```
 
+Ou command
+```bash
+app/build/install/app/bin/app
+```
 
-### First game *Even parity check* demo
+## Games demo:
+### *"Even"*
 [![asciicast](https://asciinema.org/a/643724.svg)](https://asciinema.org/a/643724)
 
 
-### Second game *Сalculator* demo
+### *"Сalculator"*
 [![asciicast](https://asciinema.org/a/643790.svg)](https://asciinema.org/a/643790)
 
 
-### Third game *Greatest common divisor (GCD)* demo
+### *"Greatest common divisor"*
 [![asciicast](https://asciinema.org/a/644151.svg)](https://asciinema.org/a/644151)
 
 
-### Fourth game *Arithmetic progression* demo
+### *"Arithmetic progression"*
 [![asciicast](https://asciinema.org/a/645093.svg)](https://asciinema.org/a/645093)
 
 
-### Fifth game *Is a prime number?* demo
+### *"Prime"*
 [![asciicast](https://asciinema.org/a/645100.svg)](https://asciinema.org/a/645100)
 
 
