@@ -18,25 +18,18 @@ make run-dist
 [![asciicast](https://asciinema.org/a/643724.svg)](https://asciinema.org/a/643724)
 
 
-
 ### Second game *Сalculator* demo
 [![asciicast](https://asciinema.org/a/643790.svg)](https://asciinema.org/a/643790)
-
 
 
 ### Third game *Greatest common divisor (GCD)* demo
 [![asciicast](https://asciinema.org/a/644151.svg)](https://asciinema.org/a/644151)
 
 
-
 ### Fourth game *Arithmetic progression* demo
 [![asciicast](https://asciinema.org/a/645093.svg)](https://asciinema.org/a/645093)
 
-<iframe width="560" height="315"
- https://asciinema.org/a/643724"
-  title="Fourth game Arithmetic progression demo" frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen></iframe>
+
 ### Fifth game *Is a prime number?* demo
 [![asciicast](https://asciinema.org/a/645100.svg)](https://asciinema.org/a/645100)
 
