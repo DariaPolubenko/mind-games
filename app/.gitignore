@@ -43,8 +43,8 @@ bin/
 .DS_Store
 ../.DS_Store
 ../../.DS_Store
-/java-project-61/**/*.DS_Store
-~/java-project-61/*.DS_Store
+java-project-61/**/.DS_Store
+~/java-project-61/.DS_Store
 
 ### Asciinema ###
 app/demo.cast
