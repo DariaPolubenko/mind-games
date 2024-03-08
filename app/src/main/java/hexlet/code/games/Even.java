@@ -20,7 +20,6 @@ public class Even {
             questions[i] = "Question: " + number;
             results[i] = getResult(number);
         }
-
         Engine.getEngine(greeting, questions, results);
     }
 
