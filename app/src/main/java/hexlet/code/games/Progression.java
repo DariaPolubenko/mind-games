@@ -3,20 +3,20 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Progression {
-    private static final int rounds = 3;
-    private static final int length = 10;
-    private static final int rangeOfFirstNumbers = 10;
-    private static final int minProgression = 1;
-    private static final int maxProgression = 20;
-    private static int missingNumber;
+    private static final int ROUNDS = 3;
+    private static final int LENGHT = 10;
+    private static final int RANGE_OF_FIRST_NUMBERS = 10;
+    private static final int MIN_PROGRESSION = 1;
+    private static final int MAX_PROGRESSION = 20;
+    private static int MISSING_NUMBER;
 
     public static void playProgression() {
 
         var greeting = "What number is missing in the progression?";
-        String[] questions = new String[rounds];
-        String[] results = new String[rounds];
+        String[] questions = new String[ROUNDS];
+        String[] results = new String[ROUNDS];
 
-        for (var i = 0; i < rounds; i++) {
+        for (var i = 0; i < ROUNDS; i++) {
 
             int[] numbers = getNumbers();
             questions[i] = getQuestion(numbers);
@@ -26,13 +26,13 @@ public class Progression {
     }
 
     public static int[] getNumbers() {
-        int[] numbers = new int[length];
+        int[] numbers = new int[LENGHT];
         // от [1 до 10]
-        numbers[0] = (int) (Math.random() * rangeOfFirstNumbers + 1);
+        numbers[0] = (int) (Math.random() * RANGE_OF_FIRST_NUMBERS + 1);
         // находим число прогрессии (разность между одним элементом и предыдущим), от [1 до 20]
-        int progressionNumber = (int) (Math.random() * (maxProgression - minProgression + 1) + minProgression);
+        int progressionNumber = (int) (Math.random() * (MAX_PROGRESSION - MIN_PROGRESSION + 1) + MIN_PROGRESSION);
 
-        for (var i = 1; i < length; i++) {
+        for (var i = 1; i < LENGHT; i++) {
             numbers[i] = numbers[i - 1] + progressionNumber;
         }
         return numbers;
@@ -40,12 +40,12 @@ public class Progression {
 
     public static String getQuestion(int[] numbers) {
         // находим номер отсутствующего элемента от [0 до 10)
-        missingNumber = (int) (Math.random() * length);
+        MISSING_NUMBER = (int) (Math.random() * LENGHT);
         var question = new StringBuilder("Question: ");
 
-        for (var i = 0; i < length; i++) {
+        for (var i = 0; i < LENGHT; i++) {
 
-            if (i == missingNumber) {
+            if (i == MISSING_NUMBER) {
                 question.append(".. ");
             } else {
                 question.append(numbers[i] + " ");
@@ -58,8 +58,8 @@ public class Progression {
     public static String getResult(int[] numbers) {
         int result = 0;
 
-        for (var i = 0; i < length; i++) {
-            if (i == missingNumber) {
+        for (var i = 0; i < LENGHT; i++) {
+            if (i == MISSING_NUMBER) {
                 result = numbers[i];
             }
         }
