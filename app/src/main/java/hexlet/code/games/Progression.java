@@ -8,7 +8,7 @@ public class Progression {
     private static final int RANGE_OF_FIRST_NUMBERS = 10;
     private static final int MIN_PROGRESSION = 1;
     private static final int MAX_PROGRESSION = 20;
-    private static int MISSING_NUMBER;
+    private static int missing_number;
 
     public static void playProgression() {
 
@@ -40,12 +40,12 @@ public class Progression {
 
     public static String getQuestion(int[] numbers) {
         // находим номер отсутствующего элемента от [0 до 10)
-        MISSING_NUMBER = (int) (Math.random() * LENGHT);
+        missing_number = (int) (Math.random() * LENGHT);
         var question = new StringBuilder("Question: ");
 
         for (var i = 0; i < LENGHT; i++) {
 
-            if (i == MISSING_NUMBER) {
+            if (i == missing_number) {
                 question.append(".. ");
             } else {
                 question.append(numbers[i] + " ");
@@ -59,7 +59,7 @@ public class Progression {
         int result = 0;
 
         for (var i = 0; i < LENGHT; i++) {
-            if (i == MISSING_NUMBER) {
+            if (i == missing_number) {
                 result = numbers[i];
             }
         }
