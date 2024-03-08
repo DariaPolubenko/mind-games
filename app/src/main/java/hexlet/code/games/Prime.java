@@ -30,7 +30,9 @@ public class Prime {
     public static String getResult(int number) {
         boolean simpleNumber = true;
 
-        if (number > 2) {
+        if (number == 1) {
+            simpleNumber = false;
+        } else if (number > 2) {
             for (var j = 2; j < number; j++) {
                 if (number % j == 0) {
                     simpleNumber = false;
