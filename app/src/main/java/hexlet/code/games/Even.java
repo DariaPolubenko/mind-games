@@ -5,7 +5,6 @@ import hexlet.code.Engine;
 public class Even {
     private static final int rounds = 3;
     private static final int length = rounds;
-
     private static final int rangeOfNumbers = 100;
     private static final int parityСheck = 2;
 
