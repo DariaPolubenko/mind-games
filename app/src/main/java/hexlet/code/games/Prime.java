@@ -3,16 +3,16 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Prime {
-    private static final int rounds = 3;
-    private static final int rangeOfNumbers = 100;
+    private static final int ROUNDS = 3;
+    private static final int RANGE_OF_NUMBERS = 100;
 
     public static void playPrime() {
 
         var greeting = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String[] questions = new String[rounds];
-        String[] results = new String[rounds];
+        String[] questions = new String[ROUNDS];
+        String[] results = new String[ROUNDS];
 
-        for (var i = 0; i < rounds; i++) {
+        for (var i = 0; i < ROUNDS; i++) {
 
             int number = getNumber();
             questions[i] = "Question: " + number;
@@ -23,7 +23,7 @@ public class Prime {
 
     public static int getNumber() {
         // от [1 до 100]
-        int number = (int) (Math.random() * rangeOfNumbers + 1);
+        int number = (int) (Math.random() * RANGE_OF_NUMBERS + 1);
         return number;
     }
 
