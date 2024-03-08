@@ -18,14 +18,14 @@ public class GCD {
 
         for (var i = 0; i < rounds; i++) {
 
-            int[] numbers = getNumbers(numberOfDigits);
+            int[] numbers = getNumbers();
             questions[i] = "Question: " + numbers[0] + " " + numbers[1];
             results[i] = getResult(numbers);
         }
         Engine.getEngine(greeting, questions, results);
     }
 
-    public static int[] getNumbers(int numberOfDigits) {
+    public static int[] getNumbers() {
         int[] numbers = new int[numberOfDigits];
 
         do {
