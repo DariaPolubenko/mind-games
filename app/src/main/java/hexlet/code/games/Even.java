@@ -17,7 +17,7 @@ public class Even {
 
         for (var i = 0; i < rounds; i++) {
 
-            var number = getNumber(rangeOfNumbers);
+            var number = getNumber();
             questions[i] = "Question: " + number;
             results[i] = getResult(number);
         }
@@ -25,7 +25,7 @@ public class Even {
         Engine.getEngine(greeting, questions, results);
     }
 
-    public static int getNumber(int rangeOfNumbers) {
+    public static int getNumber() {
         // от [1 до 100]
         var number = (int) (Math.random() * rangeOfNumbers + 1);
         return number;
