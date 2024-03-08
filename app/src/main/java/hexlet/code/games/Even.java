@@ -3,18 +3,18 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Even {
-    private static final int rounds = 3;
-    private static final int rangeOfNumbers = 100;
-    private static final int parityСheck = 2;
+    private static final int ROUNDS = 3;
+    private static final int RANGE_OF_NUMBERS = 100;
+    private static final int PARITY_CHECK = 2;
 
 
     public static void playEven() {
 
         var greeting = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        String[] questions = new String[rounds];
-        String[] results = new String[rounds];
+        String[] questions = new String[ROUNDS];
+        String[] results = new String[ROUNDS];
 
-        for (var i = 0; i < rounds; i++) {
+        for (var i = 0; i < ROUNDS; i++) {
 
             var number = getNumber();
             questions[i] = "Question: " + number;
@@ -25,12 +25,12 @@ public class Even {
 
     public static int getNumber() {
         // от [1 до 100]
-        var number = (int) (Math.random() * rangeOfNumbers + 1);
+        var number = (int) (Math.random() * RANGE_OF_NUMBERS + 1);
         return number;
     }
 
     public static String getResult(int number) {
-        var even = number % parityСheck;
+        var even = number % PARITY_CHECK;
         var result = even == 0 ? "yes" : "no";
 
         return result;
