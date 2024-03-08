@@ -22,7 +22,6 @@ public class Progression {
             questions[i] = getQuestion(numbers);
             results[i] = getResult(numbers);
         }
-
         Engine.getEngine(greeting, questions, results);
     }
 
