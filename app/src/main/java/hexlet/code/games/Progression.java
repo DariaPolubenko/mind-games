@@ -3,26 +3,29 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Progression {
+    private static final int lenght = 3;
+    private static final int rounds = 3;
+    private static final int length = 10;
+    private static final int rangeOfFirstNumbers = 10;
+    private static final int minProgression = 1;
+    private static final int maxProgression = 20;
+
+
     public static void playProgression() {
 
         var greeting = "What number is missing in the progression?";
-        final int lenght = 3;
+
         String[] questions = new String[lenght];
         String[] results = new String[lenght];
 
-        final int rounds = 3;
         for (var i = 0; i < rounds; i++) {
 
-            final int length = 10;
             int[] numbers = new int[length];
 
-            final int rangeOfFirstNumbers = 10;
             int firstNumber = (int) (Math.random() * rangeOfFirstNumbers);
             numbers[0] = firstNumber;
 
             // находим число прогрессии (разность между одним элементом и предыдущим)
-            final int minProgression = 1;
-            final int maxProgression = 20;
             int progressionNumber = (int) (Math.random() * (maxProgression - minProgression) + minProgression);
 
             // находим номер отсутствующего элемента
@@ -31,6 +34,8 @@ public class Progression {
 
             var question = new StringBuilder("Question: ");
             int result = 0;
+
+
 
             if (missingNumber == 0) {
                 result = numbers[0];
