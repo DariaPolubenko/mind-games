@@ -25,7 +25,6 @@ public class Calc {
             questions[i] = "Question: " + numbers[0] + " " + operation + " " + numbers[1];
             results[i] = getResult(numbers, operation);
         }
-
         Engine.getEngine(greeting, questions, results);
     }
 
