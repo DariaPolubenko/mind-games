@@ -4,14 +4,13 @@ import hexlet.code.Engine;
 
 public class Prime {
     private static final int rounds = 3;
-    private static final int length = rounds;
     private static final int rangeOfNumbers = 100;
 
     public static void playPrime() {
 
         var greeting = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String[] questions = new String[length];
-        String[] results = new String[length];
+        String[] questions = new String[rounds];
+        String[] results = new String[rounds];
 
         for (var i = 0; i < rounds; i++) {
 

@@ -4,7 +4,6 @@ import hexlet.code.Engine;
 
 public class GCD {
     private static final int rounds = 3;
-    private static final int lenght = rounds;
     private static final int numberOfDigits = 2;
     private static final int minNumber = 2;
     private static final int maxNumber = 10;
@@ -13,8 +12,8 @@ public class GCD {
     public static void playGCD() {
 
         var greeting = "Find the greatest common divisor of given numbers.";
-        String[] questions = new String[lenght];
-        String[] results = new String[lenght];
+        String[] questions = new String[rounds];
+        String[] results = new String[rounds];
 
         for (var i = 0; i < rounds; i++) {
 
