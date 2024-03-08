@@ -21,7 +21,7 @@ public class Calc {
         for (var i = 0; i < rounds; i++) {
 
             var operation = getOperation();
-            int[] numbers = getNumbers(numberOfDigits, operation);
+            int[] numbers = getNumbers(operation);
 
             questions[i] = "Question: " + numbers[0] + " " + operation + " " + numbers[1];
             results[i] = getResult(numbers, operation);
@@ -39,7 +39,7 @@ public class Calc {
         return operations[randomOperation];
     }
 
-    public static int[] getNumbers(int numberOfDigits, String operation) {
+    public static int[] getNumbers(String operation) {
 
         int[] numbers = new int[numberOfDigits];
 
