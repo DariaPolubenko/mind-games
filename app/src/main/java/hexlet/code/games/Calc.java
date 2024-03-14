@@ -1,13 +1,14 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Calc {
     private static final int NUMBER_OF_DIGITS = 2;
     private static final int MIN_ELEMENT = 0;
     private  static final int MAX_ELEMENT = 2;
-    private  static final int RANGE_OF_NUMBERS1 = 10;
-    private  static final int RANGE_OF_NUMBERS2 = 100;
+    private  static final int MAX_NUMBER1 = 10;
+    private  static final int MAX_NUMBER2 = 100;
 
 
     public static void playCalc() {
@@ -30,8 +31,7 @@ public class Calc {
     public static String getOperation() {
 
         String[] operations = {"+", "-", "*"};
-        // присваиваем знечение от [0 до 2]
-        int randomOperation =  (int) (Math.random() * (MAX_ELEMENT - MIN_ELEMENT + 1) + MIN_ELEMENT);
+        int randomOperation = Utils.getRandomInt(MIN_ELEMENT, MAX_ELEMENT);
 
         return operations[randomOperation];
     }
@@ -41,13 +41,11 @@ public class Calc {
         int[] numbers = new int[NUMBER_OF_DIGITS];
 
         if (operation.equals("*")) {
-            // присваиваем numbers[0] значения от [1 до 10]
-            numbers[0] = (int) (Math.random() * RANGE_OF_NUMBERS1 + 1);
-            numbers[1] = (int) (Math.random() * RANGE_OF_NUMBERS2 + 1);
+            numbers[0] = Utils.getRandomInt(1, MAX_NUMBER1);
+            numbers[1] = Utils.getRandomInt(1, MAX_NUMBER2);
         } else {
-            // присваиваем numbers[0] значения от [1 до 100]
-            numbers[0] = (int) (Math.random() * RANGE_OF_NUMBERS2 + 1);
-            numbers[1] = (int) (Math.random() * RANGE_OF_NUMBERS2 + 1);
+            numbers[0] = Utils.getRandomInt(1, MAX_NUMBER2);
+            numbers[1] = Utils.getRandomInt(1, MAX_NUMBER2);
         }
         return numbers;
     }
