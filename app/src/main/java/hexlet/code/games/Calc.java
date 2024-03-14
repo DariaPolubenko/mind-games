@@ -3,7 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Calc {
-    private static final int ROUNDS = 3;
     private static final int NUMBER_OF_DIGITS = 2;
     private static final int MIN_ELEMENT = 0;
     private  static final int MAX_ELEMENT = 2;
@@ -14,10 +13,10 @@ public class Calc {
     public static void playCalc() {
 
         var greeting = "What is the result of the expression?";
-        String[] questions = new String[ROUNDS];
-        String[] results = new String[ROUNDS];
+        String[] questions = new String[Engine.ROUNDS];
+        String[] results = new String[Engine.ROUNDS];
 
-        for (var i = 0; i < ROUNDS; i++) {
+        for (var i = 0; i < Engine.ROUNDS; i++) {
 
             var operation = getOperation();
             int[] numbers = getNumbers(operation);
