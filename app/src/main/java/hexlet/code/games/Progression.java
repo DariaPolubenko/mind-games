@@ -3,7 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Progression {
-    private static final int ROUNDS = 3;
     private static final int LENGHT = 10;
     private static final int RANGE_OF_FIRST_NUMBERS = 10;
     private static final int MIN_PROGRESSION = 1;
@@ -13,10 +12,10 @@ public class Progression {
     public static void playProgression() {
 
         var greeting = "What number is missing in the progression?";
-        String[] questions = new String[ROUNDS];
-        String[] results = new String[ROUNDS];
+        String[] questions = new String[Engine.ROUNDS];
+        String[] results = new String[Engine.ROUNDS];
 
-        for (var i = 0; i < ROUNDS; i++) {
+        for (var i = 0; i < Engine.ROUNDS; i++) {
 
             int[] numbers = getNumbers();
             questions[i] = getQuestion(numbers);
