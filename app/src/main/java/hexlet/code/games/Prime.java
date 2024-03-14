@@ -1,9 +1,11 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Prime {
-    private static final int RANGE_OF_NUMBERS = 100;
+    private static final int MIN_NUMBER = 1;
+    private static final int MAX_NUMBER = 100;
 
     public static void playPrime() {
 
@@ -13,17 +15,11 @@ public class Prime {
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
 
-            int number = getNumber();
+            int number = Utils.getRandomInt(MIN_NUMBER, MAX_NUMBER); // [1, 100]
             questions[i] = "Question: " + number;
             results[i] = getResult(number);
         }
         Engine.getEngine(greeting, questions, results);
-    }
-
-    public static int getNumber() {
-        // от [1 до 100]
-        int number = (int) (Math.random() * RANGE_OF_NUMBERS + 1);
-        return number;
     }
 
     public static String getResult(int number) {
