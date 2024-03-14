@@ -9,11 +9,10 @@ public class Calc {
     private  static final int MAX_ELEMENT = 2;
     private  static final int MAX_NUMBER1 = 10;
     private  static final int MAX_NUMBER2 = 100;
-
+    private static String greeting = "What is the result of the expression?";
 
     public static void playCalc() {
 
-        var greeting = "What is the result of the expression?";
         String[] questions = new String[Engine.ROUNDS];
         String[] results = new String[Engine.ROUNDS];
 
@@ -22,8 +21,13 @@ public class Calc {
             var operation = getOperation();
             int[] numbers = getNumbers(operation);
 
-            questions[i] = "Question: " + numbers[0] + " " + operation + " " + numbers[1];
-            results[i] = getResult(numbers, operation);
+            var firstNumber = numbers[0];
+            var secondNumber = numbers[1];
+
+            questions[i] = "Question: " + firstNumber + " " + operation + " " + secondNumber;
+
+            var result = getResult(firstNumber, secondNumber, operation);
+            results[i] = String.valueOf(result);
         }
         Engine.getEngine(greeting, questions, results);
     }
@@ -50,25 +54,23 @@ public class Calc {
         return numbers;
     }
 
-    public static String getResult(int[] numbers, String operation) {
+    public static int getResult(int firstNumber, int secondNumber, String operation) {
         int result = 0;
 
         switch (operation) {
             case "+":
-                result = numbers[0] + numbers[1];
+                result = firstNumber + secondNumber;
                 break;
             case "-":
-                result = numbers[0] - numbers[1];
+                result = firstNumber - secondNumber;
                 break;
             case "*":
-                result = numbers[0] * numbers[1];
+                result = firstNumber * secondNumber;
                 break;
             default:
                 System.out.println("Error");
                 break;
         }
-        var resultString = String.valueOf(result);
-
-        return resultString;
+        return result;
     }
 }
