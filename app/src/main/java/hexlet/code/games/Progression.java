@@ -26,7 +26,8 @@ public class Progression {
             var result = numbers[missingNumber];
             results[i] = String.valueOf(result);
 
-            questions[i] = getQuestion(numbers);
+            var question = getQuestion(numbers);
+            questions[i] = "Question: " + question;
         }
         Engine.getEngine(greeting, questions, results);
     }
