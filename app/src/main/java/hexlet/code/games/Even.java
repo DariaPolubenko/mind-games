@@ -3,7 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Even {
-    private static final int ROUNDS = 3;
     private static final int RANGE_OF_NUMBERS = 100;
     private static final int PARITY_CHECK = 2;
 
@@ -11,10 +10,10 @@ public class Even {
     public static void playEven() {
 
         var greeting = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        String[] questions = new String[ROUNDS];
-        String[] results = new String[ROUNDS];
+        String[] questions = new String[Engine.ROUNDS];
+        String[] results = new String[Engine.ROUNDS];
 
-        for (var i = 0; i < ROUNDS; i++) {
+        for (var i = 0; i < Engine.ROUNDS; i++) {
 
             var number = getNumber();
             questions[i] = "Question: " + number;
