@@ -1,9 +1,11 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Even {
-    private static final int RANGE_OF_NUMBERS = 100;
+    private static final int MIN_NUMBER = 100;
+    private static final int MAX_NUMBER = 100;
     private static final int PARITY_CHECK = 2;
 
 
@@ -15,17 +17,11 @@ public class Even {
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
 
-            var number = getNumber();
+            var number = Utils.getRandomInt(MIN_NUMBER, MAX_NUMBER);
             questions[i] = "Question: " + number;
             results[i] = getResult(number);
         }
         Engine.getEngine(greeting, questions, results);
-    }
-
-    public static int getNumber() {
-        // от [1 до 100]
-        var number = (int) (Math.random() * RANGE_OF_NUMBERS + 1);
-        return number;
     }
 
     public static String getResult(int number) {
