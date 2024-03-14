@@ -11,7 +11,6 @@ public class Engine {
 
         Scanner name = new Scanner(System.in);
         var userName = name.next();
-
         System.out.println("Hello, " + userName + "!\n" + greeting);
 
         for (var i = 0; i < ROUNDS; i++) {
@@ -32,7 +31,6 @@ public class Engine {
                 return;
             }
         }
-
         System.out.println("Congratulations, " + userName + "!");
     }
 }
