@@ -1,10 +1,11 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class GCD {
     private static final int NUMBER_OF_DIGITS = 2;
-    private static final int MIN_NUMBER = 2;
+    private static final int MIN_NUMBER = 1;
     private static final int MAX_NUMBER = 10;
 
 
@@ -28,12 +29,12 @@ public class GCD {
 
         do {
             // от [1 до 10]
-            numbers[0] = (int) (Math.random() * MAX_NUMBER + 1);
-            numbers[1] = (int) (Math.random() * MAX_NUMBER + 1);
+            numbers[0] = Utils.getRandomInt(MIN_NUMBER, MAX_NUMBER);
+            numbers[1] = Utils.getRandomInt(MIN_NUMBER, MAX_NUMBER);
         } while (numbers[0] == numbers[1]);
 
         // от [2 до 10]
-        int multiplier =  (int) (Math.random() * (MAX_NUMBER - MIN_NUMBER + 1) + MIN_NUMBER);
+        int multiplier = Utils.getRandomInt(MIN_NUMBER + 1, MAX_NUMBER);
 
         numbers[0] *= multiplier;
         numbers[1] *= multiplier;
