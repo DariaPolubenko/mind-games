@@ -21,7 +21,7 @@ public class Progression {
         for (var i = 0; i < Engine.ROUNDS; i++) {
 
             int[] numbers = getNumbers();
-            missingNumber = Utils.getRandomInt(0, LENGTH - 1); // от [0 до длина массива)
+            missingNumber = Utils.getRandom(0, LENGTH - 1); // от [0 до длина массива)
 
             var result = numbers[missingNumber];
             results[i] = String.valueOf(result);
@@ -29,14 +29,14 @@ public class Progression {
             var question = getQuestion(numbers);
             questions[i] = "Question: " + question;
         }
-        Engine.getEngine(greeting, questions, results);
+        Engine.run(greeting, questions, results);
     }
 
     public static int[] getNumbers() {
         int[] numbers = new int[LENGTH];
-        numbers[0] = Utils.getRandomInt(MIN_NUMBER, MAX_FIRST_NUMBER); // от [1 до 10]
+        numbers[0] = Utils.getRandom(MIN_NUMBER, MAX_FIRST_NUMBER); // от [1 до 10]
 
-        int progressionNumber = Utils.getRandomInt(MIN_NUMBER, MAX_NUMBER_PROGRESSION); // от [1 до 20]
+        int progressionNumber = Utils.getRandom(MIN_NUMBER, MAX_NUMBER_PROGRESSION); // от [1 до 20]
         for (var i = 1; i < LENGTH; i++) {
             numbers[i] = numbers[i - 1] + progressionNumber;
         }
