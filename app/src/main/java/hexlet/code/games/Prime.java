@@ -14,14 +14,16 @@ public class Prime {
         String[] results = new String[Engine.ROUNDS];
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
-            int number = Utils.getRandomInt(MIN_NUMBER, MAX_NUMBER); // [1, 100]
+            int number = Utils.getRandom(MIN_NUMBER, MAX_NUMBER); // [1, 100]
             questions[i] = "Question: " + number;
-            results[i] = getResult(number);
+
+            var result = getResult(number);
+            results[i] = result == true ? "yes" : "no";
         }
-        Engine.getEngine(greeting, questions, results);
+        Engine.run(greeting, questions, results);
     }
 
-    public static String getResult(int number) {
+    public static boolean getResult(int number) {
         boolean simpleNumber = true;
 
         if (number == 1) {
@@ -34,6 +36,6 @@ public class Prime {
                 }
             }
         }
-        return simpleNumber ? "yes" : "no";
+        return simpleNumber;
     }
 }
