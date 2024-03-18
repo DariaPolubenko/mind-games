@@ -16,13 +16,13 @@ public class Even {
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
 
-            var number = Utils.getRandomInt(MIN_NUMBER, MAX_NUMBER);
+            var number = Utils.getRandom(MIN_NUMBER, MAX_NUMBER);
             questions[i] = "Question: " + number;
 
             var result = getResult(number);
             results[i] = result ? "yes" : "no";
         }
-        Engine.getEngine(greeting, questions, results);
+        Engine.run(greeting, questions, results);
     }
 
     public static boolean getResult(int number) {
