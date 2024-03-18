@@ -10,6 +10,7 @@ public class Calc {
     private  static final int MAX_NUMBER1 = 10;
     private  static final int MAX_NUMBER2 = 100;
     private static String greeting = "What is the result of the expression?";
+    private static String[] operations = {"+", "-", "*"};
 
     public static void playCalc() {
 
@@ -18,7 +19,7 @@ public class Calc {
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
 
-            var operation = getOperation();
+            var operation = operations[Utils.getRandom(MIN_ELEMENT, MAX_ELEMENT)];
             int[] numbers = getNumbers(operation);
 
             var firstNumber = numbers[0];
@@ -29,15 +30,7 @@ public class Calc {
             var result = getResult(firstNumber, secondNumber, operation);
             results[i] = String.valueOf(result);
         }
-        Engine.getEngine(greeting, questions, results);
-    }
-
-    public static String getOperation() {
-
-        String[] operations = {"+", "-", "*"};
-        int randomOperation = Utils.getRandomInt(MIN_ELEMENT, MAX_ELEMENT);
-
-        return operations[randomOperation];
+        Engine.run(greeting, questions, results);
     }
 
     public static int[] getNumbers(String operation) {
@@ -45,11 +38,11 @@ public class Calc {
         int[] numbers = new int[NUMBER_OF_DIGITS];
 
         if (operation.equals("*")) {
-            numbers[0] = Utils.getRandomInt(1, MAX_NUMBER1);
-            numbers[1] = Utils.getRandomInt(1, MAX_NUMBER2);
+            numbers[0] = Utils.getRandom(1, MAX_NUMBER1);
+            numbers[1] = Utils.getRandom(1, MAX_NUMBER2);
         } else {
-            numbers[0] = Utils.getRandomInt(1, MAX_NUMBER2);
-            numbers[1] = Utils.getRandomInt(1, MAX_NUMBER2);
+            numbers[0] = Utils.getRandom(1, MAX_NUMBER2);
+            numbers[1] = Utils.getRandom(1, MAX_NUMBER2);
         }
         return numbers;
     }
