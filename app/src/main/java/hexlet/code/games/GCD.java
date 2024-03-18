@@ -24,18 +24,18 @@ public class GCD {
             var result = getResult(firstNumber, secondNumber);
             results[i] = String.valueOf(result);
         }
-        Engine.getEngine(greeting, questions, results);
+        Engine.run(greeting, questions, results);
     }
 
     public static int[] getNumbers() {
 
         int[] numbers = new int[NUMBER_OF_DIGITS];
         do {
-            numbers[0] = Utils.getRandomInt(MIN_NUMBER, MAX_NUMBER); // от [1 до 10]
-            numbers[1] = Utils.getRandomInt(MIN_NUMBER, MAX_NUMBER);
+            numbers[0] = Utils.getRandom(MIN_NUMBER, MAX_NUMBER); // от [1 до 10]
+            numbers[1] = Utils.getRandom(MIN_NUMBER, MAX_NUMBER);
         } while (numbers[0] == numbers[1]);
 
-        int multiplier = Utils.getRandomInt(MIN_NUMBER + 1, MAX_NUMBER); // от [2 до 10]
+        int multiplier = Utils.getRandom(MIN_NUMBER + 1, MAX_NUMBER); // от [2 до 10]
         numbers[0] *= multiplier;
         numbers[1] *= multiplier;
 
