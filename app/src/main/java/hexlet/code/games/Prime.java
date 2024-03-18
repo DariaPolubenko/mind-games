@@ -18,7 +18,7 @@ public class Prime {
             questions[i] = "Question: " + number;
 
             var result = getResult(number);
-            results[i] = result == true ? "yes" : "no";
+            results[i] = result ? "yes" : "no";
         }
         Engine.run(greeting, questions, results);
     }
@@ -28,9 +28,12 @@ public class Prime {
 
         if (number == 1) {
             simpleNumber = false;
+
         } else if (number > 2) {
-            for (var j = 2; j < number; j++) {
-                if (number % j == 0) {
+
+            for (var i = 2; i < number; i++) {
+
+                if (number % i == 0) {
                     simpleNumber = false;
                     break;
                 }
