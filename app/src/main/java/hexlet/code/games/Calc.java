@@ -14,8 +14,7 @@ public class Calc {
 
     public static void playCalc() {
 
-        String[] questions = new String[Engine.ROUNDS];
-        String[] results = new String[Engine.ROUNDS];
+        String[][] data = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
 
@@ -25,12 +24,12 @@ public class Calc {
             var firstNumber = numbers[0];
             var secondNumber = numbers[1];
 
-            questions[i] = "Question: " + firstNumber + " " + operation + " " + secondNumber;
+            data[i][0] = "Question: " + firstNumber + " " + operation + " " + secondNumber;
 
             var result = getResult(firstNumber, secondNumber, operation);
-            results[i] = String.valueOf(result);
+            data[i][1] = String.valueOf(result);
         }
-        Engine.run(greeting, questions, results);
+        Engine.run(greeting, data);
     }
 
     public static int[] getNumbers(String operation) {
