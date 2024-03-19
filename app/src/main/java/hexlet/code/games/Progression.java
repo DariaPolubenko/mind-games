@@ -15,8 +15,7 @@ public class Progression {
 
     public static void playProgression() {
 
-        String[] questions = new String[Engine.ROUNDS];
-        String[] results = new String[Engine.ROUNDS];
+        String[][] data = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
 
@@ -24,12 +23,12 @@ public class Progression {
             missingNumber = Utils.getRandom(0, LENGTH - 1); // от [0 до длина массива)
 
             var result = numbers[missingNumber];
-            results[i] = String.valueOf(result);
+            data[i][1] = String.valueOf(result);
 
             var question = getQuestion(numbers);
-            questions[i] = "Question: " + question;
+            data[i][0] = "Question: " + question;
         }
-        Engine.run(greeting, questions, results);
+        Engine.run(greeting, data);
     }
 
     public static int[] getNumbers() {
