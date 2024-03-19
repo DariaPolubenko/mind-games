@@ -10,17 +10,17 @@ public class Prime {
 
     public static void playPrime() {
 
-        String[] questions = new String[Engine.ROUNDS];
-        String[] results = new String[Engine.ROUNDS];
+        String[][] data = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
+
             int number = Utils.getRandom(MIN_NUMBER, MAX_NUMBER); // [1, 100]
-            questions[i] = "Question: " + number;
+            data[i][0] = "Question: " + number;
 
             var result = getResult(number);
-            results[i] = result ? "yes" : "no";
+            data[i][1] = result ? "yes" : "no";
         }
-        Engine.run(greeting, questions, results);
+        Engine.run(greeting, data);
     }
 
     public static boolean getResult(int number) {
