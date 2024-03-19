@@ -4,7 +4,6 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class GCD {
-    private static final int NUMBER_OF_DIGITS = 2;
     private static final int MIN_NUMBER = 1;
     private static final int MAX_NUMBER = 10;
     private static String greeting = "Find the greatest common divisor of given numbers.";
@@ -29,7 +28,7 @@ public class GCD {
 
     public static int[] getNumbers() {
 
-        int[] numbers = new int[NUMBER_OF_DIGITS];
+        int[] numbers = new int[2];
         do {
             numbers[0] = Utils.getRandom(MIN_NUMBER, MAX_NUMBER); // от [1 до 10]
             numbers[1] = Utils.getRandom(MIN_NUMBER, MAX_NUMBER);
