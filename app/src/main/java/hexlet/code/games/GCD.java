@@ -11,20 +11,20 @@ public class GCD {
 
     public static void playGCD() {
 
-        String[] questions = new String[Engine.ROUNDS];
-        String[] results = new String[Engine.ROUNDS];
+        String[][] data = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
+
             int[] numbers = getNumbers();
             var firstNumber = numbers[0];
             var secondNumber = numbers[1];
 
-            questions[i] = "Question: " + firstNumber + " " + secondNumber;
+            data[i][0] = "Question: " + firstNumber + " " + secondNumber;
 
             var result = getResult(firstNumber, secondNumber);
-            results[i] = String.valueOf(result);
+            data[i][1] = String.valueOf(result);
         }
-        Engine.run(greeting, questions, results);
+        Engine.run(greeting, data);
     }
 
     public static int[] getNumbers() {
