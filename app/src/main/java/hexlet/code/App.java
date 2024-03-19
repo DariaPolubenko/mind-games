@@ -30,7 +30,7 @@ class App {
                 System.out.println("Good bye!");
                 break;
             case "1":
-                Cli.greetings();
+                Cli.greeting();
                 break;
             case "2":
                 Even.playEven();
