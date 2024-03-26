@@ -14,16 +14,16 @@ public class Even {
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
 
-            var number = Utils.getRandom(MIN_NUMBER, MAX_NUMBER);
+            var number = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
             data[i][0] = "Question: " + number;
 
-            var result = getResult(number);
-            data[i][1] = result ? "yes" : "no";
+            var answer = isEven(number);
+            data[i][1] = answer ? "yes" : "no";
         }
         Engine.run(greeting, data);
     }
 
-    public static boolean getResult(int number) {
+    public static boolean isEven(int number) {
         var result = (number % 2) == 0;
         return result;
     }
