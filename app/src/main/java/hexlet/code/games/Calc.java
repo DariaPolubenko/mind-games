@@ -4,7 +4,6 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Calc {
-    private static final int NUMBER_OF_DIGITS = 2;
     private static final int MIN_ELEMENT = 0;
     private  static final int MAX_ELEMENT = 2;
     private  static final int MAX_NUMBER1 = 10;
@@ -18,7 +17,7 @@ public class Calc {
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
 
-            var operation = operations[Utils.getRandom(MIN_ELEMENT, MAX_ELEMENT)];
+            var operation = operations[Utils.getRandomNumber(MIN_ELEMENT, MAX_ELEMENT)];
             int[] numbers = getNumbers(operation);
 
             var firstNumber = numbers[0];
@@ -26,27 +25,27 @@ public class Calc {
 
             data[i][0] = "Question: " + firstNumber + " " + operation + " " + secondNumber;
 
-            var result = getResult(firstNumber, secondNumber, operation);
-            data[i][1] = String.valueOf(result);
+            int answer = calculate(firstNumber, secondNumber, operation);
+            data[i][1] = String.valueOf(answer);
         }
         Engine.run(greeting, data);
     }
 
     public static int[] getNumbers(String operation) {
 
-        int[] numbers = new int[NUMBER_OF_DIGITS];
+        int[] numbers = new int[2];
 
         if (operation.equals("*")) {
-            numbers[0] = Utils.getRandom(1, MAX_NUMBER1);
-            numbers[1] = Utils.getRandom(1, MAX_NUMBER2);
-        } else {
-            numbers[0] = Utils.getRandom(1, MAX_NUMBER2);
-            numbers[1] = Utils.getRandom(1, MAX_NUMBER2);
+            numbers[0] = Utils.getRandomNumber(1, MAX_NUMBER1); // [1, 10]
+            numbers[1] = Utils.getRandomNumber(1, MAX_NUMBER2); // [1, 100]
+            return numbers;
         }
+        numbers[0] = Utils.getRandomNumber(1, MAX_NUMBER2); // [1, 100]
+        numbers[1] = Utils.getRandomNumber(1, MAX_NUMBER2); // [1, 100]
         return numbers;
     }
 
-    public static int getResult(int firstNumber, int secondNumber, String operation) {
+    public static int calculate(int firstNumber, int secondNumber, String operation) {
         int result = 0;
 
         switch (operation) {
