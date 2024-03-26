@@ -14,34 +14,23 @@ public class GCD {
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
 
-            int[] numbers = getNumbers();
-            var firstNumber = numbers[0];
-            var secondNumber = numbers[1];
+            var firstNumber = 0;
+            var secondNumber = 0;
+            do {
+                var commonMultiplier = Utils.getRandomNumber(MIN_NUMBER + 1, MAX_NUMBER); // от [2 до 10]
+                firstNumber = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER) * commonMultiplier;
+                secondNumber = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER) * commonMultiplier;
+            } while (firstNumber == secondNumber);
 
             data[i][0] = "Question: " + firstNumber + " " + secondNumber;
 
-            var result = getResult(firstNumber, secondNumber);
-            data[i][1] = String.valueOf(result);
+            var answer = findGCD(firstNumber, secondNumber);
+            data[i][1] = String.valueOf(answer);
         }
         Engine.run(greeting, data);
     }
 
-    public static int[] getNumbers() {
-
-        int[] numbers = new int[2];
-        do {
-            numbers[0] = Utils.getRandom(MIN_NUMBER, MAX_NUMBER); // от [1 до 10]
-            numbers[1] = Utils.getRandom(MIN_NUMBER, MAX_NUMBER);
-        } while (numbers[0] == numbers[1]);
-
-        int multiplier = Utils.getRandom(MIN_NUMBER + 1, MAX_NUMBER); // от [2 до 10]
-        numbers[0] *= multiplier;
-        numbers[1] *= multiplier;
-
-        return numbers;
-    }
-
-    public static int getResult(int first, int second) {
+    public static int findGCD(int first, int second) {
 
         while (first != 0 && second != 0) {
             if (first > second) {
@@ -53,5 +42,4 @@ public class GCD {
         var result = first + second;
         return result;
     }
-
 }
