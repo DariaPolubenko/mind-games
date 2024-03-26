@@ -21,15 +21,15 @@ public class Engine {
             System.out.print("Your answer: ");
             String userAnswer = answer.next();
 
-            if (data[i][1].equals(userAnswer)) {
-                System.out.println("Correct!");
-            } else if (!data[i][1].equals(userAnswer)) {
+            if (!data[i][1].equals(userAnswer)) {
                 System.out.println("'" + userAnswer + "'"
                         + " is wrong answer ;(. Correct answer was " + "'"
                         + data[i][1] + "'.");
+
                 System.out.println("Let's try again, " + userName + "!");
                 return;
             }
+            System.out.println("Correct!");
         }
         System.out.println("Congratulations, " + userName + "!");
     }
