@@ -14,13 +14,9 @@ public class GCD {
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
 
-            var firstNumber = 0;
-            var secondNumber = 0;
-            do {
-                var commonMultiplier = Utils.getRandomNumber(MIN_NUMBER + 1, MAX_NUMBER); // от [2 до 10]
-                firstNumber = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER) * commonMultiplier;
-                secondNumber = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER) * commonMultiplier;
-            } while (firstNumber == secondNumber);
+            var commonMultiplier = Utils.getRandomNumber(MIN_NUMBER + 1, MAX_NUMBER); // от [2 до 10]
+            var firstNumber = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER) * commonMultiplier;
+            var secondNumber = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER) * commonMultiplier;
 
             data[i][0] = "Question: " + firstNumber + " " + secondNumber;
 
@@ -31,15 +27,6 @@ public class GCD {
     }
 
     public static int findGCD(int first, int second) {
-
-        while (first != 0 && second != 0) {
-            if (first > second) {
-                first = first % second;
-            } else {
-                second = second % first;
-            }
-        }
-        var result = first + second;
-        return result;
+        return second == 0 ? first : findGCD(second, first % second);
     }
 }
