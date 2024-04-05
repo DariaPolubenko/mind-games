@@ -24,19 +24,15 @@ public class Prime {
     }
 
     public static boolean isPrime(int number) {
-        boolean simpleNumber = true;
-
         if (number == 1 || number == 0) {
-            simpleNumber = false;
+            return false;
+        }
 
-        } else if (number > 2) {
-            for (var i = 2; i < number; i++) {
-                if (number % i == 0) {
-                    simpleNumber = false;
-                    break;
-                }
+        for (var i = 2; i < number; i++) {
+            if (number % i == 0) {
+                    return false;
             }
         }
-        return simpleNumber;
+        return true;
     }
 }
