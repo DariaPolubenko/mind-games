@@ -25,12 +25,8 @@ git clone git@github.com:DariaPolubenko/java-project-61.git
 In the console, type the command
 ```bash
 cd java-project-61/app
+make install
 make run-dist
-```
-
-Ou command
-```bash
-java-project-61/app/build/install/app/bin/app
 ```
 
 ## Games demo:
@@ -52,5 +48,3 @@ java-project-61/app/build/install/app/bin/app
 
 ### *"Prime"*
 [![asciicast](https://asciinema.org/a/645100.svg)](https://asciinema.org/a/645100)
-
-
