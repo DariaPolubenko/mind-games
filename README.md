@@ -8,11 +8,11 @@
 Each game asks 3 math questions and you must answer them correctly. If the answer is incorrect, it is interrupted and you are asked to go through it again.
 
 ### Included games:
-1. Even - even parity check
-2. Calc (calculator) - arithmetic expressions
-3. GCD (greatest common divisor) - finding common greatest divisor
-4. Progression (arithmetic progression) - finding missing numbers in a sequence
-5. Prime - determining a prime number
+1. _Even - even parity check_
+2. _Calc (calculator) - arithmetic expressions_
+3. _GCD (greatest common divisor) - finding common greatest divisor_
+4. _Progression (arithmetic progression) - finding missing numbers in a sequence_
+5. _Prime - determining a prime number_
 
 
 ## How to install
