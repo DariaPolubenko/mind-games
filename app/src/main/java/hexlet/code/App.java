@@ -22,7 +22,7 @@ class App {
         Scanner choice = new Scanner(System.in);
         String userChoice = choice.next();
         System.out.println("Your choice: " + userChoice + "\n");
-        
+
         switch (userChoice) {
             case "0":
                 System.out.println("Good bye!");
