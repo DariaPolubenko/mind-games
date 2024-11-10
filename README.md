@@ -13,8 +13,8 @@ Each game asks 3 math questions and you must answer them correctly. If the answe
 4. Progression (arithmetic progression) - finding missing numbers in a sequence
 5. Prime - determining a prime number
 
-### Stack:
-Java, Gradle, IntelliJ IDEA, Checkstyle, Make, Git, GitHub, Code Climate
+### Stack
+_Java, Gradle, IntelliJ IDEA, Checkstyle, Make, Git, GitHub, Code Climate_
 
 ## How to install
 In the console, type the command
